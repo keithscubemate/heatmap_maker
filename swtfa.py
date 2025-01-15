@@ -30,11 +30,16 @@ plt.title("error for data alignment params for adjustments from len = 16.9 and s
 plt.plot(range_i, range_j, 'ro')
 
 plt.ylabel("len (mm)")
-plt.yticks([v for v in range(max_i)], [round(16.9 * (1 + (v - range_i) / max_i), 2) for v in range(max_i)])
+plt.yticks(
+    [v for v in range(max_i)], [round(16.9 * (1 + (v - range_i) / max_i), 2) for v in range(max_i)]
+)
 plt.tick_params(axis='y', labelsize=3)
 
 plt.xlabel("sfc (%)")
-plt.xticks([v for v in range(max_j)], [round(34 * (1 + (v - range_j) / max_j)) for v in range(max_j)])
+plt.xticks(
+    [v for v in range(max_j)], [round(34 * (1 + (v - range_j) / max_j), 2) for v in range(max_j)],
+    rotation=270,
+)
 plt.tick_params(axis='x', labelsize=3)
 
 f.savefig("foo.pdf", bbox_inches='tight')
