@@ -25,7 +25,7 @@ f = plt.figure()
 plt.imshow(a, cmap='jet', origin='lower')
 plt.colorbar()
 
-plt.title("error for data alignment params for adjustments from len = 16.9 and sfc = 33%")
+plt.title("error for data alignment params for adjustments from len = 17.1 and sfc = 34%")
 
 plt.plot(range_i, range_j, 'ro')
 
